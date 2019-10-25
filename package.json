@@ -1,0 +1,30 @@
+{
+  "name": "pognis-website",
+  "version": "1.0.0",
+  "description": "website for pognis",
+  "main": "app.js",
+  "dependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "morgan": "^1.9.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.4",
+    "prettier": "^1.18.2"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node init.js"
+  },
+  "author": "Dahee Cha",
+  "license": "ISC"
+}
