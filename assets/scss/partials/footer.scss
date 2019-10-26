@@ -1,0 +1,45 @@
+.footer {
+    border-top: $black solid 1px;
+
+    .footer__grid {
+        margin: 0px 140px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        .footer__menu {
+            border-bottom: $gray solid 1px;
+            grid-column: span 5;
+
+            ul {
+                display: flex;
+                align-items: center;
+                color: $gray;
+
+                li {
+                    padding: 20px;
+                    color: $black;
+                }
+            }
+        }
+
+        .footer__customer-section {
+            grid-column: span 1;
+        }
+
+        .footer__bank-info {
+            grid-column: span 1;
+        }
+
+        .footer__order-tracking {
+            grid-column: span 2;
+        }
+
+        .footer__shop-menu {
+            grid-column: span 1;
+        }
+
+        .footer__company-info {
+            grid-column: span 1;
+        }
+    }
+}

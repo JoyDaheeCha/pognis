@@ -8,12 +8,21 @@
     "@babel/core": "^7.6.4",
     "@babel/node": "^7.6.3",
     "@babel/preset-env": "^7.6.3",
+    "autoprefixer": "^9.7.0",
+    "babel-loader": "^8.0.6",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
+    "css-loader": "^3.2.0",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
+    "mini-css-extract-plugin": "^0.8.0",
     "morgan": "^1.9.1",
-    "pug": "^2.0.4"
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
+    "pug": "^2.0.4",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
@@ -23,7 +32,9 @@
     "prettier": "^1.18.2"
   },
   "scripts": {
-    "start": "nodemon --exec babel-node init.js"
+    "dev:server": "nodemon --exec babel-node init.js --delay 2",
+    "dev:assets": "webpack -w --mode=development",
+    "build:assets": "webpack -w --mode=production"
   },
   "author": "Dahee Cha",
   "license": "ISC"

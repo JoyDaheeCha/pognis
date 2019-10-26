@@ -3,36 +3,48 @@ header
         .header__row1
             .row1__col1
                 a(href="https://google.com")
-                    span.facebookIcon
+                    .facebookIcon
                         i.fab.fa-facebook-f
                 a(href="https://naver.com")
-                    span.instagramIcon 
+                    .instagramIcon 
                         i.fab.fa-instagram
             .row1__col2
-                ul
+                ul.menu-list
                     li 로그인
+                    ||
                     li 회원가입
+                    ||
                     li 장바구니
-                    li 마이샵▼
-                    li 커뮤니티▼
+                    ||
+                    li 마이샵 ▼
+                    ||
+                    li 커뮤니티 ▼
+                    ||
                     li 상품Q&amp;A
+                    ||
                     li 상품후기
                 form.search-bar
                     input(type="text", name="term")
                     i.fas.fa-search
         .header__row2
-            span.row2__logo-left
-                img(src="https://images.unsplash.com/photo-1496200186974-4293800e2c20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80" height="100" width="100")
-            span.row2__logo-center
-                img(src="https://images.unsplash.com/photo-1496200186974-4293800e2c20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80" height="100" width="100")
-            span.row2__logo-right
-                img(src="https://images.unsplash.com/photo-1496200186974-4293800e2c20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80" height="100" width="100")
+            span.row2__left
+                img(src="https://images.unsplash.com/photo-1506959184536-dc0fc1a1033e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80" height="100" width="100")
+            a.row2__center(href="routes.home")
+                span.logo-title 
+                    span Pognis
+                    span mall.com
+                span.logo-desc 
+                    span 포그니스, 내 가족을 위한 선택
+            div.row2__right
+                span 
+                    | Prepare your Autumn <br/>
+                    | with us
         .header__row3
-            span.menu
-            ul
+            .menu
+                i.fas.fa-bars
+            ul.product-category
                 li ABOUT US
                 li 포그니스
-                li 더베딩 컴퍼니
                 li 차렵이불
                 li 이불커버
                 li 베개커버
