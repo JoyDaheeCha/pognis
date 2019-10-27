@@ -17,19 +17,19 @@ header
                         a(href=`${routes.join}`) 회원가입
                     ||
                     li
-                        a(href=`${routes.cart}`) 장바구니
+                        a(href=`/users${routes.cart}`) 장바구니
                     ||
                     li 
-                        a(href=`${routes.editProfile}`) 마이샵 ▼
+                        a(href=`/users${routes.editProfile}`) 마이샵 ▼
                     ||
                     li 
-                        a(href=`${routes.allcs}`) 커뮤니티 ▼
+                        a(href=`/customer-support${routes.allcs}`) 커뮤니티 ▼
                     ||
                     li
-                        a(href=`${routes.faq}`) 상품Q&amp;A
+                        a(href=`/customer-support${routes.faq}`) 상품Q&amp;A
                     ||
                     li
-                        a(href=`${routes.reviews}`) 상품후기
+                        a(href=`/customer-support${routes.reviews}`) 상품후기
                 form.search-bar
                     input(type="text", name="term")
                     i.fas.fa-search
