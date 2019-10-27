@@ -9,11 +9,15 @@
     box-sizing: border-box;
 }
 
+html {
+    position: relative;
+}
+
 body {
-    width: 100%;
     min-width: 1300px;
     font-family: FontNG, Verdana, Dotum, AppleGothic, sans-serif;
     font-size: 0.75em;
+    position: relative;
 }
 
 a {
