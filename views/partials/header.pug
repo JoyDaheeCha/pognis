@@ -10,26 +10,33 @@ header
                         i.fab.fa-instagram
             .row1__col2
                 ul.menu-list
-                    li 로그인
+                    li 
+                        a(href=`${routes.login}`) 로그인
                     ||
-                    li 회원가입
+                    li
+                        a(href=`${routes.join}`) 회원가입
                     ||
-                    li 장바구니
+                    li
+                        a(href=`${routes.cart}`) 장바구니
                     ||
-                    li 마이샵 ▼
+                    li 
+                        a(href=`${routes.editProfile}`) 마이샵 ▼
                     ||
-                    li 커뮤니티 ▼
+                    li 
+                        a(href=`${routes.allcs}`) 커뮤니티 ▼
                     ||
-                    li 상품Q&amp;A
+                    li
+                        a(href=`${routes.faq}`) 상품Q&amp;A
                     ||
-                    li 상품후기
+                    li
+                        a(href=`${routes.reviews}`) 상품후기
                 form.search-bar
                     input(type="text", name="term")
                     i.fas.fa-search
         .header__row2
             span.row2__left
                 img(src="https://images.unsplash.com/photo-1506959184536-dc0fc1a1033e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80" height="100" width="100")
-            a.row2__center(href="routes.home")
+            a.row2__center(href=`${routes.home}`)
                 span.logo-title 
                     span Pognis
                     span mall.com
