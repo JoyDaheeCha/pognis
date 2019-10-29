@@ -1,0 +1,7 @@
+mixin productBlock(product={})
+    .productBlock
+        a(href="https://google.com")
+            img.product__thumbnail(src=product.thumbUrl, alt="img")
+        .product__name=product.name
+        .product__original-price=product.originalPrice
+        .product__current-price=product.currentPrice

@@ -1,0 +1,21 @@
+.productBlock {
+    max-width: 100%;
+
+    img {
+        max-width: 100%;
+    }
+
+    &>* {
+        padding: 10px 0px 10px 5px;
+    }
+
+    .product__name {
+        border-bottom: $light-gray 1px solid;
+        font-weight: 600;
+    }
+
+    .product__original-price {
+        color: $red;
+        text-decoration: line-through;
+    }
+}
