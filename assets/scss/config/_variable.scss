@@ -3,7 +3,10 @@ $dark-gray: #515151;
 $gray: #D4D4D4;
 $light-gray: #EAEAEA;
 $blue: #6652C9;
+$red: #D21F1F;
 
 :root {
     --darkenImage: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    --max-width: 1260px;
+    --min-width: 960px;
 }

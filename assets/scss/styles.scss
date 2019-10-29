@@ -2,7 +2,9 @@
 @import "./config/_variable.scss";
 @import "./partials/header.scss";
 @import "./partials/footer.scss";
+@import "./partials/productBlock.scss";
 @import "./pages/home.scss";
+@import "./layout.scss";
 
 
 * {
@@ -14,12 +16,16 @@ html {
 }
 
 body {
-    min-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: FontNG, Verdana, Dotum, AppleGothic, sans-serif;
-    font-size: 0.75em;
     position: relative;
+    font-size: 0.78em;
+    width: 100%;
 }
 
 a {
-    text-decoration: none;
+    all:unset;
+    cursor: pointer;
 }
