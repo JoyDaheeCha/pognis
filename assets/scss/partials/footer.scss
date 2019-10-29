@@ -1,15 +1,21 @@
 .footer {
     position: relative;
     border-top: $black solid 1px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .footer__grid {
-        margin: 0px 140px;
+        min-width: var(--min-width);
+        max-width: var(--max-width);
+        width: 100%;
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(8, 1fr);
 
         .footer__menu {
             border-bottom: $gray solid 1px;
-            grid-column: span 5;
+            grid-column: span 8;
 
             ul {
                 display: flex;
@@ -23,13 +29,8 @@
             }
         }
 
-        .footer__customer-section,
-        .footer__bank-info,
-        .footer__order-tracking,
-        .footer__shop-menu,
-        .footer__company-info {
-            grid-column: span 1;
-            margin: 30px 80px 0px 0px;
+        &>*:not(:first-child) {
+            margin-top: 30px;
 
             h4 {
                 font-weight: 900;
@@ -39,7 +40,6 @@
             .phone {
                 margin: 15px 0px 15px 0px;
                 font-weight: 800;
-                font-size: 1.5em;
             }
 
             li {
@@ -72,8 +72,16 @@
             }
         }
 
-        .footer__order-tracking {
+        .footer__customer-section {
             grid-column: span 2;
+        }
+
+        .footer__bank-info {
+            grid-column: span 2;
+        }
+
+        .footer__order-tracking {
+            grid-column: span 3;
 
             .return {
                 margin-top: 30px;
@@ -81,11 +89,10 @@
         }
 
         .footer__shop-menu {
-            ul {
-                padding-right: 50px;
+            grid-column: span 1;
 
+            ul {
                 li {
-                    cursor: pointer;
                     border: $gray solid 1px;
                     padding: 10px 5px;
                 }
@@ -93,7 +100,7 @@
         }
 
         .footer__company-info {
-            grid-column: span 5;
+            grid-column: span 8;
             margin: 0px 0px 30px 0px;
             padding-top: 30px;
             border-top: 1px solid $gray;
@@ -105,9 +112,6 @@
     }
 
     .footer_copyright {
-        position: absolute;
-        bottom: -10;
-        left: 0;
         width: 100%;
         background-color: $black;
         color: white;
