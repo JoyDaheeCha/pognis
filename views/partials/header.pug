@@ -1,6 +1,6 @@
-header
-    .header__wrapper
-        .header__row1
+header.header__wrapper
+    .header__row1
+        .inner-frame
             .row1__col1
                 a(href="https://google.com")
                     .facebookIcon
@@ -33,7 +33,8 @@ header
                 form.search-bar
                     input(type="text", name="term")
                     i.fas.fa-search
-        .header__row2
+    .header__row2
+        .inner-frame
             span.row2__left
                 img(src="https://images.unsplash.com/photo-1506959184536-dc0fc1a1033e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80" height="100" width="100")
             a.row2__center(href=`${routes.home}`)
@@ -46,7 +47,8 @@ header
                 span 
                     | Prepare your Autumn <br/>
                     | with us
-        .header__row3
+    .header__row3#jsHeaderRow3
+        .inner-frame
             .menu
                 i.fas.fa-bars
             ul.product-category
