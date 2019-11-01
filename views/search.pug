@@ -11,8 +11,8 @@ block content
             .grid-wrapper-4
                 each product in products
                     +productBlock({
-                            thumbUrl: product.thumbUrl,
-                            name: product.name,
-                            originalPrice: product.originalPrice,
-                            currentPrice: product.currentPrice
-                            })
+                        imageUrl: product.imageUrl,
+                        productName: product.productName,
+                        previousPrice: product.previousPrice,
+                        currentPrice: product.currentPrice
+                        })

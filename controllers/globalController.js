@@ -13,11 +13,19 @@ export const home = async (req, res) => {
 export const join = (req, res) => res.render("join");
 export const login = (req, res) => res.render("login");
 export const logout = (req, res) => res.render("logout");
-export const search = (req, res) => {
+export const search = async (req, res) => {
   const {
     query: { term: searchingBy }
   } = req;
-  const regExp = new RegExp(searchingBy, "i");
-  const products = Products.filter(product => regExp.test(product.name));
-  res.render("search", { searchingBy, products });
+  try {
+    const products = await Product.find({
+      productName: {
+        $regex: searchingBy,
+        $options: "i"
+      }
+    });
+    res.render("search", { searchingBy, products });
+  } catch (error) {
+    res.render("search", { searchingBy, products: [] });
+  }
 };

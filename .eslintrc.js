@@ -15,6 +15,8 @@ module.exports = {
     quotes: ["error", "double"],
     "linebreak-style": "off",
     "no-console": "off",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "arrow-parens": "off",
+    "no-alert": "off"
   }
 };
