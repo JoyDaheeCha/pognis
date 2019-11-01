@@ -1,1 +1,33 @@
 extends layouts/main
+
+block content
+    .login
+        h1.login__title LOGIN
+        form.login__form
+            input(action=routes.login, method="post", type="text", placeholder="아이디")
+            input(type="text", placeholder="비밀번호")
+            input(type="submit" value="로그인")
+        .login__account-others
+            button.account-others__findId 아이디찾기
+            ||
+            button.account-others__findPw 비밀번호찾기
+            ||
+            button.account-others__signUp 회원가입
+        .login__social
+            button.social__naver
+                .icon 
+                    i.xi-naver.xi-2x
+                |네이버 로그인
+            button.social__facebook 
+                .icon
+                    i.xi-facebook.xi-2x
+                |페이스북 로그인
+            button.social__kakao 
+                .icon 
+                    i.xi-kakaotalk.xi-2x
+                |카카오 로그인
+        .login__non-member
+            button
+                i.fas.fa-truck 
+                span 비회원 주문조회
+
