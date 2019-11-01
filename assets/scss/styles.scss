@@ -3,8 +3,13 @@
 @import "./partials/header.scss";
 @import "./partials/footer.scss";
 @import "./partials/productBlock.scss";
+@import "./partials/gridWrappers.scss";
+@import "./partials/category.scss";
+@import "./partials/formBox.scss";
 @import "./pages/home.scss";
-@import "./layout.scss";
+@import "./pages/login.scss";
+@import "./pages/join.scss";
+@import "./pages/uploadProduct.scss";
 
 
 * {
@@ -25,7 +30,31 @@ body {
     width: 100%;
 }
 
-a {
-    all:unset;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 30vh;
+}
+
+main>* {
+    width: 100%;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+}
+
+a,
+button {
+    all: unset;
     cursor: pointer;
+    color: $black;
+}
+
+input {
+    //border: none;
+
+    &:focus {
+        outline: none;
+    }
 }
