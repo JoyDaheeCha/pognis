@@ -20,6 +20,10 @@ const NOTICE = "/notice";
 const EVENTS = "/events";
 const REVIEWS = "/reviews";
 
+// Admin
+const ADMIN = "/admin";
+const UPLOAD_PRODUCT = "/upload-product";
+
 const routes = {
   home: HOME,
   join: JOIN,
@@ -36,7 +40,9 @@ const routes = {
   faq: FAQ,
   notice: NOTICE,
   events: EVENTS,
-  reviews: REVIEWS
+  reviews: REVIEWS,
+  admin: ADMIN,
+  uploadProduct: UPLOAD_PRODUCT
 };
 
 export default routes;
