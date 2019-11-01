@@ -1,1 +1,18 @@
 extends layouts/main
+include mixins/productBlock
+
+block content
+    .search__result
+        .search__header
+            h1 '#{searchingBy}'로 검색 결과, #{products.length}개의 상품이 검색되었습니다.  
+        .search__product
+            if products.length == 0
+                h1 검색된 상품이 없습니다.
+            .grid-wrapper-4
+                each product in products
+                    +productBlock({
+                            thumbUrl: product.thumbUrl,
+                            name: product.name,
+                            originalPrice: product.originalPrice,
+                            currentPrice: product.currentPrice
+                            })
