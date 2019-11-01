@@ -90,3 +90,5 @@ typings/
 package-lock.json
 
 static
+
+uploads
