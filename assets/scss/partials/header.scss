@@ -79,14 +79,12 @@
                         }
 
                         &:focus {
-                            outline: none;
                             background-color: $light-gray;
                         }
                     }
 
-                    i {
+                    button {
                         margin: 0px 10px;
-                        color: $black;
                     }
                 }
             }

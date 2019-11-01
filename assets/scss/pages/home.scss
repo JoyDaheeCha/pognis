@@ -1,95 +1,100 @@
-.mainPicture {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #faf0e6;
-    position: relative;
-    max-width: unset;
-    min-width: unset;
+.home {
+    .home__main-pic {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #faf0e6;
+        position: relative;
+        max-width: unset;
+        min-width: unset;
 
-    img {
-        height: 600px;
-    }
+        .main-pic__img {
+            height: 600px;
+        }
 
-    .buttons-wrapper {
-        position: absolute;
-        top: 90%;
+        .main-pic__btns {
+            position: absolute;
+            top: 90%;
 
-        button {
-            all: unset;
-            margin: 0px 5px;
-            background-color: rgba(250, 250, 250, 0.5);
-            padding: 10px 20px;
-            cursor: pointer;
+            button {
+                all: unset;
+                margin: 0px 5px;
+                background-color: rgba(250, 250, 250, 0.5);
+                padding: 10px 20px;
+                cursor: pointer;
 
-            &:hover {
-                background-color: white;
+                &:hover {
+                    background-color: white;
+                }
             }
         }
     }
-}
 
-.devider {
-    margin: 20px 0px;
-    border-top: 1px solid $gray;
-
-}
-
-.event {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #e6f0fa;
-    background-size: cover;
-    color: $black;
-    height: 405px;
-    letter-spacing: 10px;
-
-    span:first-child {
-        text-decoration: underline;
-        font-size: 5em;
-
+    .home__page-devider {
+        margin: 20px 0px;
+        border-top: 1px solid $gray;
     }
 
-    span:nth-child(2) {
-        margin-top: 30px;
-        font-size: 3em;
-    }
-}
-
-.product__special {
-
-    h1 {
-        border-top: $black solid 2px;
-        border-bottom: $black solid 2px;
-        padding: 10px 0px;
-        text-align: center;
-        font-size: 2em;
-        font-weight: 600;
+    .home__event {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #e6f0fa;
+        background-size: cover;
+        color: $black;
+        height: 405px;
+        letter-spacing: 10px;
 
         span:first-child {
-            color: $blue;
+            text-decoration: underline;
+            font-size: 5em;
+        }
+
+        span:nth-child(2) {
+            margin-top: 30px;
+            font-size: 3em;
         }
     }
 
-    .grid-wrapper-3 {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(100px, 1fr));
-        gap: 10px;
+    .product__special {
+
+        .grid-3cols {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(100px, 1fr));
+            gap: 10px;
+        }
+        .special__title {
+            margin: 50px 0px 20px 0px;
+            border-top: $black solid 2px;
+            border-bottom: $black solid 2px;
+            padding: 10px 0px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: 600;
+
+            span:first-child {
+                color: $blue;
+            }
+        }
     }
-}
 
-h1 {
-    margin: 50px 0px 20px 0px;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 600;
-}
-
-.grid-wrapper-4 {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(100px, 1fr));
-    gap: 10px;
+    .product__best,
+    .product__cover,
+    .product__wedding {
+        .title {
+            margin: 50px 0px 20px 0px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: 600;
+        }
+        /*
+        .grid-wrapper-4 {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(100px, 1fr));
+            gap: 10px;
+        }
+        */
+    }
 }
