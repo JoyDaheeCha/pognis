@@ -1,0 +1,119 @@
+.login,
+.login__form,
+.login__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__title,
+.login__form>*,
+.login__account-others,
+.login__social>*,
+.login__non-member {
+    margin-bottom: 20px;
+}
+
+.login {
+
+    .login__title {
+        font-size: 2em;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    .login__form {
+        input {
+            width: 400px;
+            height: 45px;
+        }
+
+        input:first-child,
+        input:nth-child(2) {
+            border-bottom: $gray solid 1px;
+        }
+
+        input:nth-child(3) {
+            background-color: $dark-gray;
+            color: white;
+        }
+    }
+
+    .login__account-others {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        color: $gray;
+        border-bottom: $gray solid 1px;
+        border-top: $gray solid 1px;
+
+        button {
+            margin: 0px 10px;
+            padding: 10px;
+        }
+    }
+
+    .login__social,
+    .login__non-member {
+        button {
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            background-color: $light-gray;
+            width: 400px;
+            height: 50px;
+        }
+    }
+
+    .login__social {
+        button {
+            &:hover {
+                .icon {
+                    width: 70px;
+                }
+            }
+        }
+
+        .social__naver {
+            .icon {
+                background-color: #44BA2F;
+            }
+        }
+
+        .social__facebook {
+            .icon {
+                background-color: #365BAC;
+            }
+        }
+
+        .social__kakao {
+            .icon {
+                background-color: #EBCA12;
+            }
+        }
+
+        .icon {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 50px;
+            color: white;
+            margin-right: 20px;
+            transition: width 0.2s;
+        }
+    }
+
+    .login__non-member {
+        button {
+            justify-content: center;
+
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+}
