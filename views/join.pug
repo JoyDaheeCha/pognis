@@ -1,1 +1,100 @@
 extends layouts/main
+
+block content
+    include ./partials/category
+    .join
+        h1.join__title 
+            i.fas.fa-square-full
+            |회원가입
+
+        form.form-box
+            .form-box__head 
+                span 아이디
+                span *
+            .form-box__content
+                input(type="text", name="id", required)
+                span 아이디를 입력해 주세요. (영문소문자/숫자, 4~16자)
+            .form-box__head 
+                span 비밀번호
+                span *
+            .form-box__content
+                input(type="password", name="password1", required)
+                span (영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8자~16자)
+            .form-box__head
+                span 비밀번호 확인
+                span *
+            .form-box__content
+                input(type="password", name="password2", required)    
+            .form-box__head
+                span 이름
+                span *
+            .form-box__content
+                input(type="text", name="name", required)
+            .form-box__head
+                span 휴대전화
+                span *
+            .form-box__content
+                select(name="phone-first")
+                        option 010
+                        option 011
+                        option 016
+                        option 017
+                        option 018
+                        option 019
+                span -
+                input(type="text", name="phone-middle", required)
+                span -
+                input(type="text", name="phone-last", required)
+            .form-box__head
+                span 이메일
+                span *
+            .form-box__content
+                input(type="text", name="email-id", required)
+                span @
+                input(type="text", name="email-domain", required)
+                select
+                    option -이메일 선택-
+                    option naver.com
+                    option daum.net
+                    option nate.com
+                    option hotmail.com
+                    option yahoo.com
+                    option empas.com
+                    option korea.com
+                    option dreamwiz.com
+                    option gmail.com
+                    option 직접입력
+        
+            .agree-area
+                h1.agree-area__title 전체 동의
+                .agree-area__wrapper
+                    .agre-area__all
+                        input(type="checkbox" name="agreeAll", id="agreeAll", value="T") 
+                        label(for="agreeAll") 이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.
+                    .agree-area__part
+                        h5 [필수] 이용약관 동의
+                        .agree-area__part__doc
+                            include ./partials/agreementTest
+                        span 이용약관에 동의하십니까? 
+                        input(type="checkbox" name="termsAndAgreement", id="termsAndAgreement", value="T" required) 
+                        label(for="termsAndAgreement") 동의함
+                    .agree-area__part
+                        h5 [필수] 개인정보 수집 및 이용 동의
+                        .agree-area__part__doc
+                            include ./partials/agreementTest
+                        span 이용약관에 동의하십니까? 
+                        input(type="checkbox" name="privacyPolicy", id="privacyPolicy", value="T" required) 
+                        label(for="privacyPolicy") 동의함
+                    .agree-area__part
+                        h5 [선택] 쇼핑정보 수신 동의
+                        .agree-area__part__doc
+                            include ./partials/agreementTest
+                        span SMS 수신을 동의하십니까?
+                        input(type="checkbox" name="mktSMS", id="mktSMS", value="T")
+                        label(for="mktSMS") 동의함
+                        .line-devider
+                        span 이메일 수신을 동의하십니까?
+                        input(type="checkbox" name="mktEmail", id="mktEmail", value="T") 
+                        label(for="mktEmail") 동의함
+            .submitBtnWrapper
+                input.submitBtn(type="submit", value="회원가입")
