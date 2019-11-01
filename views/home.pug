@@ -2,60 +2,61 @@ extends layouts/main
 include mixins/productBlock
 
 block content
-    .mainPicture 
-        img(src="https://images.unsplash.com/flagged/photo-1570737143701-65c082fd72d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80", alt="main photo")
-        .buttons-wrapper
-            button 모달 마리아
-            button 10월의 이벤트 상품
-            button 모달 앨빈
-    .devider 
-    .event
-        span EVENT 
-        span 10만원 이상 무료 배송
-    .product__special
-        h1 
-            span #{new Date().getMonth()+1}월의 스페셜 
-            span 특가상품!
-        //3 columns grid
-        .grid-wrapper-3
-            each product in products
-                +productBlock({
-                    thumbUrl: product.thumbUrl,
-                    name: product.name,
-                    originalPrice: product.originalPrice,
-                    currentPrice: product.currentPrice
-                    })
-    .product__best
-        h1 포그니스 BEST
-        //4 columns grid
-        .grid-wrapper-4
-            each product in products
-                +productBlock({
-                    thumbUrl: product.thumbUrl,
-                    name: product.name,
-                    originalPrice: product.originalPrice,
-                    currentPrice: product.currentPrice
-                    })
-    .product__cover
-        h1 이불커버 &amp; 차렵
-        //4 columns grid
-        .grid-wrapper-4
-            each product in products
-                +productBlock({
-                    thumbUrl: product.thumbUrl,
-                    name: product.name,
-                    originalPrice: product.originalPrice,
-                    currentPrice: product.currentPrice
-                    })
-    .product__wedding
-        h1 예단 &amp; 혼수이불
-        //4 columns grid
-        .grid-wrapper-4
-            each product in products
-                +productBlock({
-                    thumbUrl: product.thumbUrl,
-                    name: product.name,
-                    originalPrice: product.originalPrice,
-                    currentPrice: product.currentPrice
-                    })
-                
+    .home
+        .home__main-pic
+            img.main-pic__img(src="https://images.unsplash.com/flagged/photo-1570737143701-65c082fd72d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80", alt="main photo")
+            .main-pic__btns
+                button 모달 마리아
+                button 10월의 이벤트 상품
+                button 모달 앨빈
+        .home__page-devider 
+        .home__event
+            span EVENT 
+            span 10만원 이상 무료 배송
+        .product__special
+            h1.special__title
+                span #{new Date().getMonth()+1}월의 스페셜 
+                span 특가상품!
+            //3 columns grid
+            .grid-3cols
+                each product in products
+                    +productBlock({
+                        imageUrl: product.imageUrl,
+                        productName: product.productName,
+                        previousPrice: product.previousPrice,
+                        currentPrice: product.currentPrice
+                        })
+        .product__best
+            h1.title 포그니스 BEST
+            //4 columns grid
+            .grid-4cols
+                //each product in products
+                    +productBlock({
+                        thumbUrl: product.thumbUrl,
+                        name: product.name,
+                        originalPrice: product.originalPrice,
+                        currentPrice: product.currentPrice
+                        })
+        .product__cover
+            h1.title 이불커버 &amp; 차렵
+            //4 columns grid
+            .grid-4cols
+                //each product in products
+                    +productBlock({
+                        thumbUrl: product.thumbUrl,
+                        name: product.name,
+                        originalPrice: product.originalPrice,
+                        currentPrice: product.currentPrice
+                        })
+        .product__wedding
+            h1.title 예단 &amp; 혼수이불
+            //4 columns grid
+            .grid-4cols
+                //each product in products
+                    +productBlock({
+                        thumbUrl: product.thumbUrl,
+                        name: product.name,
+                        originalPrice: product.originalPrice,
+                        currentPrice: product.currentPrice
+                        })
+                    

@@ -1,7 +1,7 @@
 mixin productBlock(product={})
     .productBlock
         a(href="https://google.com")
-            img.product__thumbnail(src=product.thumbUrl, alt="img")
-        .product__name=product.name
-        .product__original-price=product.originalPrice
+            img.product__image-url(src=product.imageUrl, alt="img")
+        .product__name=product.productName
+        .product__previous-price=product.previousPrice
         .product__current-price=product.currentPrice

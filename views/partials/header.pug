@@ -2,14 +2,17 @@ header.header__wrapper
     .header__row1
         .inner-frame
             .row1__col1
-                a(href="https://google.com")
+                a(target="_blank", href="https://www.facebook.com/search/top/?q=%ED%8F%AC%EA%B7%B8%EB%8B%88%EC%8A%A4&ref=eyJzaWQiOiIwLjY5Njc5MDgzOTU2Njc2ODMiLCJxcyI6IkpUVkNKVEl5SlVWRUpUaEdKVUZESlVWQkpVSTNKVUk0SlVWQ0pUaENKVGc0SlVWREpUaEJKVUUwSlRJeUpUVkUiLCJndiI6ImJlZTA5ZjkzZmE3MzJjZmE1OWExY2I2ZDlmNDUwZDM4OTI0MjRlNDkiLCJlbnRfaWRzIjpbXSwiYnNpZCI6IjU5NmU2ZWM4OTA0NWIyODZlMjQwNzAzZGNkOTdiY2JjIiwicHJlbG9hZGVkX2VudGl0eV9pZHMiOm51bGwsInByZWxvYWRlZF9lbnRpdHlfdHlwZSI6bnVsbCwicmVmIjoiYnJfdGYiLCJjc2lkIjpudWxsLCJoaWdoX2NvbmZpZGVuY2VfYXJndW1lbnQiOm51bGwsImNsaWVudF90aW1lX21zIjoxNTcyNDIwODQ3MTc5fQ&epa=SEARCH_BOX")
                     .facebookIcon
                         i.fab.fa-facebook-f
-                a(href="https://naver.com")
+                a(href="https://www.instagram.com/pogunis/?hl=ko", target="_blank")
                     .instagramIcon 
                         i.fab.fa-instagram
             .row1__col2
                 ul.menu-list
+                    li 
+                        a(href=`/admin${routes.uploadProduct}`) 업로드
+                    ||
                     li 
                         a(href=`${routes.login}`) 로그인
                     ||
@@ -30,9 +33,10 @@ header.header__wrapper
                     ||
                     li
                         a(href=`/customer-support${routes.reviews}`) 상품후기
-                form.search-bar
-                    input(type="text", name="term")
-                    i.fas.fa-search
+                form(action=routes.search, method="get").search-bar
+                    input(type="text", placeholder="상품명을 입력해주세요", name="term")
+                    button(type="submit")
+                        i.fas.fa-search.searchBtn
     .header__row2
         .inner-frame
             span.row2__left
