@@ -7,7 +7,7 @@ block content
             i.fas.fa-square-full
             |회원가입
 
-        form.form-box
+        form.form-box(action=`${routes.join}`, method="post")
             .form-box__head 
                 span 아이디
                 span *
@@ -18,13 +18,13 @@ block content
                 span 비밀번호
                 span *
             .form-box__content
-                input(type="password", name="password1", required)
+                input(type="password", name="password", required)
                 span (영문 대소문자/숫자/특수문자 중 3가지 이상 조합, 8자~16자)
             .form-box__head
                 span 비밀번호 확인
                 span *
             .form-box__content
-                input(type="password", name="password2", required)    
+                input(type="password", name="password1", required)    
             .form-box__head
                 span 이름
                 span *
@@ -34,7 +34,7 @@ block content
                 span 휴대전화
                 span *
             .form-box__content
-                select(name="phone-first")
+                select(name="phoneFirst")
                         option 010
                         option 011
                         option 016
@@ -42,16 +42,16 @@ block content
                         option 018
                         option 019
                 span -
-                input(type="text", name="phone-middle", required)
+                input(type="text", name="phoneMiddle", required)
                 span -
-                input(type="text", name="phone-last", required)
+                input(type="text", name="phoneLast", required)
             .form-box__head
                 span 이메일
                 span *
             .form-box__content
-                input(type="text", name="email-id", required)
+                input(type="text", name="emailId", required)
                 span @
-                input(type="text", name="email-domain", required)
+                input(type="text", name="emailDomain", required)
                 select
                     option -이메일 선택-
                     option naver.com
