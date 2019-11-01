@@ -1,0 +1,75 @@
+extends layouts/main
+
+block content
+    .upload-product
+        h1.upload-product__title 상품 등록 페이지
+        form.form-box(action=`/admin${routes.uploadProduct}`, method="post", enctype="multipart/form-data")
+            .form-box__head 
+                span 카테고리
+                span *
+            .form-box__content
+                select( name="category")
+                    option -카테고리 선택-
+                    option 차렵이불
+                    option 이불커버
+                    option 베개커버
+                    option 패드/매트커버
+                    option 예단/혼수이불
+                    option 솜/소품
+                    option F/W 신상품
+            .form-box__head 
+                span 상품명
+                span *
+            .form-box__content
+                input(type="text", name="productName")
+            .form-box__head 
+                span 상품 이미지
+                span *
+            .form-box__content
+                input(type="file",accept="image/*", name="imageUrl")
+            .form-box__head 
+                span 할인 이전 가격
+                span *
+            .form-box__content
+                input(type="text",name="previousPrice")
+            .form-box__head 
+                span 할인 후 가격
+                span *
+            .form-box__content
+                input(type="text", name="currentPrice")
+            .form-box__head 
+                span 할인률
+                span *
+            .form-box__content
+                input#jsDiscountRate(type="text", name="discountRate", placeholder="추가금액 입력 후 자동 계산", value="50", readonly="readonly")
+            .options
+                .options__title 옵션 ( 한 줄 이상 기입 필수 )
+                .options__header 색상
+                .options__header 사이즈
+                .options__header 추가금액
+                .options__header 재고 수량 
+                .options__header 추가/삭제
+                .options__content
+                    input(type="text",name="color")
+                .options__content
+                    input(type="text",name="size")
+                .options__content
+                    input(type="text", name="extraPrice", placeholder="예: -1000, 1000")
+                .options__content
+                    input(type="text", name="remainingNum", placeholder="예: 50개일 경우 50")
+                .options__content
+                    button.addItem(type="button") +
+                    button.deleteItem(type="button") -
+                .options__content
+                    input(type="text",  name="color")
+                .options__content
+                    input(type="text", name="size")
+                .options__content
+                    input(type="text", name="extraPrice", placeholder="예: -1000, 1000")
+                .options__content
+                    input(type="text", name="remainingNum", placeholder="예: 50개일 경우 50")
+                .options__content
+                    button.addItem(type="button") +
+                    button.deleteItem(type="button") -
+            input.submitBtn(type="submit", value="상품 등록")
+            
